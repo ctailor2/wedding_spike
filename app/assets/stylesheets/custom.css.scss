@@ -1,28 +1,20 @@
 @import "bootstrap";
 
-$navbar-height: 7.5%;
-
-.navbar {
-	min-height: $navbar-height;
-}
-
-.navbar-brand {
-	min-height: $navbar-height;
-}
-
 body {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #f8f8f8;
 }
 
-.main-pic {
-	display: block;
-	margin: 0 auto;
-	max-height: 100%;
-	max-width: 100%;
-}
-
 .container, html, body {
 	height: 100%;
 }
+
+.pic {
+	background-image: url(image_path("Chirag and Uma's Engagement-276.jpg"));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+	height: 100%;
+}
+
