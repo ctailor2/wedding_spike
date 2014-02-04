@@ -14,7 +14,7 @@ body {
 	background-image: url(image_path("Chirag and Uma's Engagement-276.jpg"));
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto 100%;
+	background-size: auto 100%; /* Use 'contain' for best fit height/width */
 	height: 100%;
 }
 
