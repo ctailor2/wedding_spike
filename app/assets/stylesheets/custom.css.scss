@@ -19,7 +19,10 @@ body {
 .main-pic {
 	display: block;
 	margin: 0 auto;
-	max-height: 85%;
+	max-height: 100%;
 	max-width: 100%;
 }
 
+.container, html, body {
+	height: 100%;
+}
