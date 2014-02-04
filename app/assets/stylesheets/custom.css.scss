@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+$navbar-height: 7.5%;
+
+.navbar {
+	height: $navbar-height;
+}
+
+.navbar-brand {
+	height: $navbar-height;
+}
+
 body {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -9,7 +19,7 @@ body {
 .main-pic {
 	display: block;
 	margin: 0 auto;
-	max-height: 86%;
-	max-width: 86%;
+	max-height: 85%;
+	max-width: 100%;
 }
 
