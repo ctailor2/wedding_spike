@@ -3,11 +3,11 @@
 $navbar-height: 7.5%;
 
 .navbar {
-	height: $navbar-height;
+	min-height: $navbar-height;
 }
 
 .navbar-brand {
-	height: $navbar-height;
+	min-height: $navbar-height;
 }
 
 body {
