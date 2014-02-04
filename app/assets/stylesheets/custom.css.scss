@@ -22,12 +22,9 @@ body {
 	height: 66px;
 }
 
-.height-75-percent {
-	height: 75%;
-}
-
-.rsvp-float-bar {
+.rsvp-bar {
 	position: absolute;
+	bottom: 100px;
 	left: 15px;
 	right: 15px;
 	background-color: rgba(91, 51, 125, 0.5); /* Hex 5B337D */
