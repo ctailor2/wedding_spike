@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
 	def index
 	end
 
-	def edit
+	def findrsvp
+		sleep(2)
+		@group = Group.find_by_code(params[:code])
+		render 'findrsvp', :layout => false
 	end
 
 end

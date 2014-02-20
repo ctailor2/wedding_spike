@@ -1,6 +1,6 @@
 WeddingSpike::Application.routes.draw do
 	get '/' => 'application#index'
-	post '/' => 'application#edit'
+	post '/' => 'application#findrsvp'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
