@@ -13,4 +13,9 @@ class ApplicationController < ActionController::Base
 		render 'findrsvp', :layout => false
 	end
 
+	def add_member
+		group = Group.first
+		@member = group.members.create(first_name: params[:first_name], last_name: params[:last_name])
+		render 'member', :layout => false
+	end
 end

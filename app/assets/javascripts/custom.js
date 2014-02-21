@@ -8,4 +8,12 @@ $(document).ready(function(){
 			$('#myModal').modal();
 		});
 	});
-});
+
+	$("#myModal").on("submit","#add-members-form",function(event){
+		event.preventDefault();
+
+		$.post('/new/member', $(this).serialize(), function(response){
+			$("#group-member-list").append(response)
+		});
+	});
+})

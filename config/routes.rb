@@ -1,5 +1,6 @@
 WeddingSpike::Application.routes.draw do
 	get '/' => 'application#index'
+	post '/new/member' => 'application#add_member'
 	post '/' => 'application#findrsvp'
 
   # The priority is based upon order of creation: first created -> highest priority.
