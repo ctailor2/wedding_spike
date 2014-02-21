@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def findrsvp
-		sleep(2)
+		sleep(1)
 		@group = Group.find_by_code(params[:code])
 		render 'findrsvp', :layout => false
 	end
