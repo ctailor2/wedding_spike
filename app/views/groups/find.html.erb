@@ -1,0 +1,30 @@
+<% unless @group.nil? %>
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h5 class="modal-title"><%= @group.name %></h5>
+	</div>
+	<div class="modal-body text-center">
+		<div class="tab-content">
+			<div class="tab-pane active" id="members">
+				<%= render "/members/new" %>
+				<%= render "/members/show" %>
+			</div>
+			<div class="tab-pane" id="response">
+				This is the response tab.
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<div class="text-center">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default active" id="members-btn" href="#members" data-toggle="tab">Members</button>
+				<button type="button" class="btn btn-default" id="response-btn" href="#response" data-toggle="tab">Response</button>
+			</div>
+		</div>
+	</div>
+<% else %>
+	<div class="modal-body">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h5 class="modal-title">Group Not Found - Please Try Again</h5>
+	</div>
+<% end %>

@@ -1,5 +1,5 @@
 <div class="row height-66-px rsvp-bar bkgd-opaque-teal">
-	<form action="/" method="post" role="form-inline" id="rsvp-form">
+	<%= form_tag('/groups/find', controller: 'groups', id: "rsvp-form") do %>
 		<div class="form-group">
 			<div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
 			<div id="rsvptextbox" class="col-lg-4 col-md-4 col-sm-6 col-xs-8">
@@ -14,6 +14,6 @@
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
 		</div>
-	</form>
+	<% end %>
 </div>
-<div id="myModal" class="modal fade" tabindex="-1" style="display: none;"></div>
+<div id="myModal" data-width="700px" class="modal fade" tabindex="-1" style="display: none;"></div>

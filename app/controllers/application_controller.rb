@@ -7,12 +7,6 @@ class ApplicationController < ActionController::Base
 	def index
 	end
 
-	def findrsvp
-		sleep(1)
-		@group = Group.find_by_code(params[:code])
-		render 'findrsvp', :layout => false
-	end
-
 	def add_member
 		group = Group.first
 		@member = group.members.create(first_name: params[:first_name], last_name: params[:last_name])

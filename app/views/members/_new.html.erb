@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<form action="/groups/<%= @group.id %>/members" method="post" class="form form-inline" id="add-members-form">
+			<div class="form-group">
+				<input type="text" name="first_name" class="form-control" placeholder="First Name">
+				<input type="text" name="last_name" class="form-control" placeholder="Last Name">
+				<select name="age_group_id" class="form-control" id="age-group-dropdown">
+					<% AgeGroup.all.each do |age_group| %>
+						<option value="<%= age_group.id %>"><%= age_group.description %></option>
+					<% end %>
+				</select>
+				<button type="submit" class="btn btn-default">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+

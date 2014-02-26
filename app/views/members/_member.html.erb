@@ -1,0 +1,12 @@
+<tr>
+	<td><%= member.first_name %></td>
+	<td><%= member.last_name %></td>
+	<td><%= member.age_group.description %></td>
+	<td>
+		<%= form_tag(group_member_path(member.group.id, member.id), method: :delete, id: "delete-member-form") do %>
+			<button type="submit" class="btn btn-default btn-xs">
+				<span class="glyphicon glyphicon-remove"></span>
+			</button>
+		<% end %>
+	</td>
+</tr>

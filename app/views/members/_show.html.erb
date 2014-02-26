@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table table-hover" id="group-member-list">
+			<tr>
+				<th class="text-center">First Name</th>
+				<th class="text-center">Last Name</th>
+				<th class="text-center">Age Group</th>
+				<th></th>
+			</tr>
+			<% @group.members.each do |member| %>
+				<%= render partial: "members/member", locals: { member: member } %>
+			<% end %>
+		</table>
+	</div>
+</div>

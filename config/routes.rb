@@ -1,7 +1,9 @@
 WeddingSpike::Application.routes.draw do
-	get '/' => 'application#index'
-	post '/new/member' => 'application#add_member'
-	post '/' => 'application#findrsvp'
+	root 'application#index'
+	post '/groups/find' => 'groups#find'
+	resources :groups, :only => [] do
+		resources :members, :only => [:create, :destroy]
+	end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
