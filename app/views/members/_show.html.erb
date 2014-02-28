@@ -8,7 +8,7 @@
 				<th></th>
 			</tr>
 			<% @group.members.each do |member| %>
-				<%= render partial: "members/member", locals: { member: member } %>
+				<%= render partial: "members/member", object: member %>
 			<% end %>
 		</table>
 	</div>
