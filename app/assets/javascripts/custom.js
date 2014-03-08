@@ -33,6 +33,10 @@ $(document).ready(function(){
 
 	// To properly display the currently active button.
 	$("#myModal").on("show.bs.tab", '#response-btn[data-toggle="tab"]', function(event){
+		var url = $("#response").data("url");
+		$.get(url, function(response){
+			$("#response").html(response);
+		});
 		$(event.target.previousElementSibling).removeClass("active");
 		$(event.target).addClass("active");
 	});

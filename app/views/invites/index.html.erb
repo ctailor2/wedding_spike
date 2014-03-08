@@ -1,0 +1,18 @@
+<% @group.invites.each do |invite| %>
+	<div class="panel panel-default">
+		<form>
+			<div class="form-group">
+				<h5><%= invite.event.title %></h5>
+				<div class="panel-body">
+					<% @group.members.each do |member| %>
+						<div class="checkbox text-left">
+							<label>
+								<input type="checkbox" value=""><%= member.first_name %> <%= member.last_name %>
+							</label>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</form>
+	</div>
+<% end %>

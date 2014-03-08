@@ -3,6 +3,7 @@ WeddingSpike::Application.routes.draw do
 	post '/groups/find' => 'groups#find'
 	resources :groups, :only => [] do
 		resources :members, :only => [:create, :destroy]
+		resources :invites, :only => [:index]
 	end
 
   # The priority is based upon order of creation: first created -> highest priority.
