@@ -46,4 +46,13 @@ $(document).ready(function(){
 		$(event.target.nextElementSibling).removeClass("active");
 		$(event.target).addClass("active");
 	});
+
+	// Playing with scripts for limiting # of checkboxes user can select
+	$("#myModal").on("change", "input:checkbox", function(event){
+		var inviteId = $(this).closest(".panel-body").data("inviteid");
+		var max = parseInt($(this).closest(".panel-body").data("numinvited"));
+		var checkboxes = $("input:checkbox[data-inviteid=" + inviteId + "]")
+		var current = checkboxes.filter(":checked").length;
+		checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+	});
 })

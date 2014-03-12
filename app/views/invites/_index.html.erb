@@ -3,11 +3,12 @@
 		<form>
 			<div class="form-group">
 				<h5><%= invite.event.title %></h5>
-				<div class="panel-body">
+				<h5><%= invite.num_invited %></h5>
+				<div class="panel-body" data-inviteId="<%= invite.id %>" data-numInvited="<%= invite.num_invited %>">
 					<% @group.members.each do |member| %>
 						<div class="checkbox text-left">
 							<label>
-								<input type="checkbox" value=""><%= member.first_name %> <%= member.last_name %>
+								<input type="checkbox" data-inviteId="<%= invite.id %>" value=""><%= member.first_name %> <%= member.last_name %>
 							</label>
 						</div>
 					<% end %>
